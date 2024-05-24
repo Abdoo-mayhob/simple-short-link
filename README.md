@@ -11,8 +11,7 @@
 
 ## Description
 
-Wordpress Plugin to Calculate and Show Estimated Reading Time in your posts in Both Arabic and English.
-With no perfomance Impact, and no external loaded styles or scripts
+Wordpress Plugin to Make short links to your posts without any external services or database bloat.
 
 ## Installation
 

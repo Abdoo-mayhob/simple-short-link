@@ -57,13 +57,13 @@ function simple_shortlink_meta_box_cb($post) {
 
     // Short Link Works only on published posts.
     if('publish' !== $post->post_status){
-        echo __('Short Link is for Published Posts Only.', 'simple-short-link');
+        echo esc_html_e('Short Link is for Published Posts Only.', 'simple-short-link');
         return;
     }
     $post_link = site_url() . '/?p=' . $post->ID;
     ?>
-    <input type="text" value="<?= $post_link ?>" id="shortlink" readonly>
-    <button type="button" class="button" onclick="CopyShortLink()"><?php _e('Copy', 'simple-short-link')?></button>
+    <input type="text" value="<?php echo esc_url($post_link) ?>" id="shortlink" readonly>
+    <button type="button" class="button" onclick="CopyShortLink()"><?php esc_html_e('Copy', 'simple-short-link')?></button>
     <script>
         function CopyShortLink() {
             var copyText = document.getElementById("shortlink");

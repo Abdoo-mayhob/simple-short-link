@@ -1,7 +1,7 @@
 # Simple Short Link
 
-**Contributors:** abdoo-mayhob  
-**Tags:** shortlink,post,short link,shorturl,url,link
+**Contributors:** abdoomayhob  
+**Tags:** shortlink,short link,shorturl,url,link
 **Requires at least:** 5.0  
 **Tested up to:** 6.5.3  
 **Requires PHP:** 7.0  
@@ -9,9 +9,13 @@
 **License:** GPLv2 or later
 **License URI:** [https://www.gnu.org/licenses/gpl-2.0.html](https://www.gnu.org/licenses/gpl-2.0.html)    
 
+Make short links to your posts without any external services or database bloat. Super Lite and Simple !
+
 ## Description
 
-Wordpress Plugin to Make short links to your posts without any external services or database bloat.
+Make short links to your posts without any external services or database bloat.
+No expire date for the links ! generated localy on your website, not by any 3rd party service.
+You can use the shortlink to share the post anywhere including social media (without any issues with post preview).
 
 ## Installation
 
@@ -32,5 +36,8 @@ Wordpress Plugin to Make short links to your posts without any external services
 2. **Dose this plugin creates additional tables or uses the database at all ?**
    - No, This plugin will not make any read/write operations to the database at all, thus.. simple.
 
-# Credit
-- [Abdoo Mayhob](https://abdoo.me)
+3. **Will the generated short link preview the post correctly on social media ?**
+   - Yes.
+
+4. **Dose the short link has any clicking tracking features?**
+   - No. simple direct link.

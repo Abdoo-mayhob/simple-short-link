@@ -3,9 +3,9 @@
 /**
  *
  * Plugin Name: Simple Short Link
- * Plugin URI: https://github.com/Abdoo-mayhob/Estimated-Reading-Time
+ * Plugin URI: https://github.com/Abdoo-mayhob/simple-short-link
  * Description: Makes short links to your posts without any external services or database bloat.
- * Version: 1.0.0
+ * Version: 1.0.1
  * Author: Abdoo
  * Author URI: https://abdoo.me
  * License: GPLv2 or later

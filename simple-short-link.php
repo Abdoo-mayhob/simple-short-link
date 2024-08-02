@@ -1,11 +1,10 @@
 <?php
-
 /**
  *
  * Plugin Name: Simple Short Link
  * Plugin URI: https://github.com/Abdoo-mayhob/simple-short-link
  * Description: Makes short links to your posts without any external services or database bloat.
- * Version: 1.0.1
+ * Version: 1.0.2
  * Author: Abdoo
  * Author URI: https://abdoo.me
  * License: GPLv2 or later
@@ -39,38 +38,35 @@ add_action('admin_init', function () {
     load_plugin_textdomain('simple-short-link', false, dirname(plugin_basename(__FILE__)) . '/languages');
 });
 
-// --------------------------------------------------------------------------------------
-// Shortlink Box
+// Enqueue scripts and styles
+add_action('admin_enqueue_scripts', function ($hook) {
+    if ('post.php' === $hook || 'post-new.php' === $hook) {
+        wp_enqueue_script('simple-short-link-js', plugin_dir_url(__FILE__) . 'simple-short-link.js', [], '1.0.0', true);
+        // wp_enqueue_style('simple-short-link-css', plugin_dir_url(__FILE__) . 'simple-short-link.css', [], '1.0.0');
+    }
+});
 
+// Shortlink Box
 add_action('add_meta_boxes', function() {
     add_meta_box(
         'shortlink-box', 
         __('Short Link', 'simple-short-link'), 
-        'simple_shortlink_meta_box_cb', 
+        'ssl_simple_shortlink_meta_box_cb', 
         'post', 
         'side', 
         'high'
     );
 });
 
-function simple_shortlink_meta_box_cb($post) {
-
+function ssl_simple_shortlink_meta_box_cb($post) {
     // Short Link Works only on published posts.
-    if('publish' !== $post->post_status){
+    if ('publish' !== $post->post_status) {
         echo esc_html_e('Short Link is for Published Posts Only.', 'simple-short-link');
         return;
     }
     $post_link = site_url() . '/?p=' . $post->ID;
     ?>
-    <input type="text" value="<?php echo esc_url($post_link) ?>" id="shortlink" readonly>
-    <button type="button" class="button" onclick="CopyShortLink()"><?php esc_html_e('Copy', 'simple-short-link')?></button>
-    <script>
-        function CopyShortLink() {
-            var copyText = document.getElementById("shortlink");
-            copyText.select();
-            copyText.setSelectionRange(0, 99999);
-            document.execCommand("copy");
-        }
-    </script>
+    <input type="text" value="<?php echo esc_url($post_link); ?>" id="shortlink" readonly>
+    <button type="button" class="button" id="copy-shortlink"><?php esc_html_e('Copy', 'simple-short-link'); ?></button>
     <?php
 }

@@ -4,7 +4,7 @@
  * Plugin Name: Simple Short Link
  * Plugin URI: https://wordpress.org/plugins/simple-short-link/
  * Description: Makes short links to your posts without any external services or database bloat.
- * Version: 1.0.3
+ * Version: 1.1.0
  * Author: Abdoo
  * Author URI: https://abdoo.me
  * License: GPLv2 or later

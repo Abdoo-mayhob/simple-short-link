@@ -1,11 +1,15 @@
 # Simple Short Link
 
+[![WordPress Plugin Downloads](https://img.shields.io/wordpress/plugin/dt/simple-short-link?style=flat&logo=wordpress&labelColor=%2321759b%20&color=green)](https://wordpress.org/plugins/simple-short-link/)
+[![WordPress Plugin Downloads](https://img.shields.io/wordpress/plugin/stars/simple-short-link?style=flat&logo=wordpress&labelColor=%2321759b%20&color=green)](https://wordpress.org/plugins/simple-short-link/)
+[![WordPress Plugin Downloads](https://img.shields.io/wordpress/plugin/v/simple-short-link?style=flat&logo=wordpress&labelColor=%2321759b%20&color=green)](https://wordpress.org/plugins/simple-short-link/)
+
 **Contributors:** abdoomayhob  
 **Tags:** shortlink, pretty, shorturl, url, link  
 **Requires at least:** 5.0  
 **Tested up to:** 6.6.1  
 **Requires PHP:** 7.0  
-**Stable tag:** 1.0.3  
+**Stable tag:** 1.1.0 
 **License:** GPLv2 or later  
 **License URI:** [https://www.gnu.org/licenses/gpl-2.0.html](https://www.gnu.org/licenses/gpl-2.0.html)
 
